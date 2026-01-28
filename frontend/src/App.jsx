@@ -1,34 +1,26 @@
 import { useState } from "react";
 import "./App.css";
-import axios from "axios";
-import { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Hero from "./components/Body/Hero";
+import Layout from "./Layout";
+import NavSidebar from "./components/Nav/NavSide";
+import Login from "./components/Login/login";
 
 function App() {
-  const [joke, setJoke] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("/api")
-      .then((response) => setJoke(response.data))
-      .catch((err) => console.log("My Error : ", err))
-      .finally(function () {
-        console.log("working useEffect");
-      });
-  }, []);
+  const [color, setColor] = useState("yellow");
 
   return (
-    <>
-      <h1>React Frontend</h1>
-      <p>Joke : {joke.length}</p>
-
-      {joke.map((post) => (
-        <div className="post-card" key={post.id}>
-          <span className="post-id">Post #{post.id}</span>
-          <h3 className="post-title">{post.title}</h3>
-          <p className="post-body">{post.body}</p>
-        </div>
-      ))}
-    </>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="" element={<Hero />}></Route>
+            <Route path="/about" element={<NavSidebar />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
