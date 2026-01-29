@@ -26,7 +26,7 @@ export default function Hero() {
                 Consistent
               </span>
               <br />
-              Compete Better
+              Record & Compete
             </h1>
 
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">

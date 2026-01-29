@@ -1,3 +1,8 @@
+import leaderboard from "../../assets/leaderboard.png";
+import network from "../../assets/network.png"
+import james from '../../assets/james.png'
+
+
 export default function MiddleSection() {
   const features = [
     {
@@ -10,7 +15,7 @@ export default function MiddleSection() {
         "Daily and subject-wise tracking",
         "Simple and distraction-free sessions",
       ],
-      image: "https://picsum.photos/600/400?random=11",
+      image: james,
     },
     {
       title: "Leaderboards & Rankings",
@@ -22,7 +27,7 @@ export default function MiddleSection() {
         "Daily & weekly performance boards",
         "Progress comparison with peers",
       ],
-      image: "https://picsum.photos/600/400?random=12",
+      image: leaderboard,
       reverse: true,
     },
     {
@@ -35,7 +40,7 @@ export default function MiddleSection() {
         "Study-together live sessions",
         "Focused, learner-only community",
       ],
-      image: "https://picsum.photos/600/400?random=13",
+      image: network,
     },
   ];
 
