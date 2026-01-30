@@ -6,7 +6,7 @@ const userSchema = new Schema({
 
     username: {             // for leaderboard names
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     email: {                // for signup login
@@ -54,12 +54,12 @@ const userSchema = new Schema({
     }
 );
 
-userSchema.pre('save', async function (next) {
+userSchema.pre('save', async function () {
 
-    if (!this.isModified("password")) return next();
+    if (!this.isModified("password")) return ;
 
-    this.password = bcrypt.hash(this.password, 8)
-    next()
+    this.password = await bcrypt.hash(this.password, 8)
+   
 });
 
 userSchema.methods.isPasswordCorrect = async function (password) {
@@ -69,7 +69,7 @@ userSchema.methods.isPasswordCorrect = async function (password) {
 userSchema.methods.generateAccessToken = function () {
     return jwt.sign({
         _id: this._id,
-        username: this.username
+
     },
         process.env.ACCESS_TOKEN_SECRET,
         { expiresIn: process.env.ACCESS_TOKEN_EXPIRY }
