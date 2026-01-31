@@ -1,6 +1,6 @@
 // Video-code is there, but its Commented-out
 
-import NavSidebar from "../Nav/NavSide";
+import NavSidebar from "../Dashboard/Dashboard";
 import { NavLink } from "react-router-dom";
 import Faqs from "./Faqs";
 import MiddleSection from "./MiddleSection";
