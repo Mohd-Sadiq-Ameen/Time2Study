@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hero from "./components/Body/Hero";
@@ -7,7 +6,6 @@ import NavSidebar from "./components/Nav/NavSide";
 import Login from "./components/Login/login";
 
 function App() {
-  const [color, setColor] = useState("yellow");
 
   return (
     <div>
