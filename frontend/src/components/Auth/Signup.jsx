@@ -45,9 +45,8 @@ export default function Signup() {
             </label>
             <input
               name="email"
-              type="email"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="text-slate-900 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
               placeholder="Enter email"
             />
@@ -59,7 +58,6 @@ export default function Signup() {
             </label>
             <input
               name="password"
-              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="text-slate-900 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
