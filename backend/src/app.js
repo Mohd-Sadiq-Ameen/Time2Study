@@ -1,11 +1,16 @@
 import express from "express"
 import cookieParser from "cookie-parser"
 import cors from "cors"
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express()
 
+console.log("CORS ORIGIN : " , process.env.CORS_ORIGIN);
+
+
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CORS_ORIGIN,
     credentials: true // should be true , false bec of testing purposes
 }))
 
