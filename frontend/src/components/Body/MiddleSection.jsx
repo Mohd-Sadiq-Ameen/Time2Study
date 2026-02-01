@@ -1,7 +1,7 @@
 import leaderboard from "../../assets/leaderboard.png";
-import network from "../../assets/network.png"
-import james from '../../assets/james.png'
-
+import network from "../../assets/network.png";
+import james from "../../assets/james.png";
+import earnings from "../../assets/money.png"
 
 export default function MiddleSection() {
   const features = [
@@ -41,6 +41,19 @@ export default function MiddleSection() {
         "Focused, learner-only community",
       ],
       image: network,
+    },
+    {
+      title: "Get Paid to Learn",
+      subtitle: "Consistency Pays",
+      description:
+        "Stay consistent, rank higher, and earn rewards for genuine study effort. Learners who maintain verified study streaks and top rankings unlock paid opportunities and incentives.",
+      points: [
+        "Rewards for consistent study streaks",
+        "Earnings based on verified study time",
+        "Top learners get featured & incentivized",
+      ],
+      image: earnings, // replace with your reward/earnings illustration
+      reverse: true,
     },
   ];
 

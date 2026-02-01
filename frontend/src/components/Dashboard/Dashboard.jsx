@@ -34,7 +34,7 @@ export default function Dashboard() {
                 S
               </div>
               <h2 className="font-bold text-lg text-slate-800">
-                StudyHub
+                FocusRank
               </h2>
             </div>
           )}
