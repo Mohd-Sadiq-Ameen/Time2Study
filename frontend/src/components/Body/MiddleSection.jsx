@@ -1,22 +1,23 @@
 import leaderboard from "../../assets/leaderboard.png";
 import network from "../../assets/network.png";
 import james from "../../assets/james.png";
-import earnings from "../../assets/money.png"
+import earnings from "../../assets/money.png";
 
 export default function MiddleSection() {
   const features = [
     {
-      title: "Real Study Time Tracking",
-      subtitle: "Stay Accountable",
+      title: "Video-Based Study Time Tracking",
+      subtitle: "Track Real Study, Automatically",
       description:
-        "Record your study sessions using raw videos or study links and automatically track real study time. No manual timers, no fake entries — just honest effort.",
+        "Track your study time by submitting a raw study video or a YouTube video link from your channel. The app calculates actual study duration directly from the video — no manual timers, no fake entries.",
       points: [
-        "Auto-calculated study duration",
-        "Daily and subject-wise tracking",
-        "Simple and distraction-free sessions",
+        "Supports raw video uploads and YouTube URLs",
+        "Automatically calculates study duration from video length",
+        "Daily and subject-wise study analytics",
       ],
       image: james,
     },
+
     {
       title: "Leaderboards & Rankings",
       subtitle: "Healthy Competition",
@@ -43,15 +44,16 @@ export default function MiddleSection() {
       image: network,
     },
     {
-      title: "Get Paid to Learn",
-      subtitle: "Consistency Pays",
+      title: "Earn Rewards for Studying Consistently",
+      subtitle: "Progress Over Pressure",
       description:
-        "Stay consistent, rank higher, and earn rewards for genuine study effort. Learners who maintain verified study streaks and top rankings unlock paid opportunities and incentives.",
+        "Consistent and verified study effort unlocks levels, milestones, and real incentives. Rewards are structured to encourage long-term habits rather than short-term competition.",
       points: [
-        "Rewards for consistent study streaks",
-        "Earnings based on verified study time",
-        "Top learners get featured & incentivized",
+        "One-time and milestone-based study rewards",
+        "Levels and streaks built on verified study sessions",
+        "Optional competitive rewards for long-term top learners",
       ],
+
       image: earnings, // replace with your reward/earnings illustration
       reverse: true,
     },
