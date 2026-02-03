@@ -5,22 +5,42 @@ export default function Faqs() {
     {
       question: "How does study tracking work?",
       answer:
-        "We automatically track your focused study sessions using timers and activity signals. You get accurate insights without manual effort.",
+        "You track your study by submitting a raw study video or a YouTube study video from your channel. The platform automatically calculates your study time based on the video duration — no manual timers or fake entries.",
     },
     {
-      question: "Can I study with friends live?",
+      question: "Do I need to record myself every time?",
       answer:
-        "Yes. You can join live study rooms, see who’s studying, and stay accountable together in real time.",
+        "Yes. Study time is verified through video to keep tracking honest and fair for everyone. You can upload a raw video or use an existing YouTube study video.",
     },
     {
-      question: "Is my data secure?",
+      question: "What kind of videos can I upload?",
       answer:
-        "Absolutely. We use end-to-end encryption, secure authentication, and follow industry-standard security practices.",
+        "You can upload raw study videos or share a YouTube link from your own channel. The video should clearly represent your study session.",
     },
     {
-      question: "Is this platform free to use?",
+      question: "Is live studying with others required?",
       answer:
-        "You can start for free with core features. Advanced analytics and premium tools are available in paid plans.",
+        "No. Studying live with others is optional. You can study on your own or join focused learners when you want extra accountability.",
+    },
+    {
+      question: "How do rewards and streaks work?",
+      answer:
+        "Rewards are based on verified study consistency and long-term streaks, not on short sessions or competition. The goal is to support healthy study habits, not pressure.",
+    },
+    {
+      question: "Is competition mandatory?",
+      answer:
+        "No. Leaderboards and rankings are optional. If you prefer focusing on your own progress, you can study without competing.",
+    },
+    {
+      question: "Is my data safe?",
+      answer:
+        "Yes. Your videos and study data are securely stored and only used for study verification and analytics. We do not sell personal data.",
+    },
+    {
+      question: "Is the platform free to use?",
+      answer:
+        "You can start for free with basic study tracking. Some advanced features and reward eligibility are part of paid plans.",
     },
   ];
 
@@ -31,7 +51,10 @@ export default function Faqs() {
   };
 
   return (
-    <section id="faqs" className="relative py-24 bg-white dark:bg-black overflow-hidden">
+    <section
+      id="faqs"
+      className="relative py-24 bg-white dark:bg-black overflow-hidden"
+    >
       {/* background glow */}
       <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-white to-purple-50 dark:from-zinc-900 dark:via-black dark:to-purple-900/20" />
 
