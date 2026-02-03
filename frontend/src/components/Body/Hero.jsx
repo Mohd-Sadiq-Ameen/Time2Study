@@ -12,9 +12,9 @@ export default function Hero() {
         <section className="relative w-full h-screen bg-white dark:bg-black overflow-hidden">
           <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-white to-purple-50 dark:from-zinc-900 dark:via-black dark:to-purple-900/20"></div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-0 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium mb-8">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 Track Your Real Study Time
               </div>
