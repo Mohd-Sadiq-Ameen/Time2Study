@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <>
       <div className="flex">
-        <section className="relative w-full h-screen bg-white dark:bg-black overflow-hidden">
+        <section className="relative w-full pb-14 bg-white dark:bg-black overflow-hidden">
           <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-white to-purple-50 dark:from-zinc-900 dark:via-black dark:to-purple-900/20"></div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
