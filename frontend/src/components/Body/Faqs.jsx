@@ -18,19 +18,9 @@ export default function Faqs() {
         "You can upload raw study videos or share a YouTube link from your own channel. The video should clearly represent your study session.",
     },
     {
-      question: "Is live studying with others required?",
-      answer:
-        "No. Studying live with others is optional. You can study on your own or join focused learners when you want extra accountability.",
-    },
-    {
       question: "How do rewards and streaks work?",
       answer:
         "Rewards are based on verified study consistency and long-term streaks, not on short sessions or competition. The goal is to support healthy study habits, not pressure.",
-    },
-    {
-      question: "Is competition mandatory?",
-      answer:
-        "No. Leaderboards and rankings are optional. If you prefer focusing on your own progress, you can study without competing.",
     },
     {
       question: "Is my data safe?",
