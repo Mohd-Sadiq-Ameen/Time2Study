@@ -1,7 +1,9 @@
+// /Users/homefolder/Desktop/Projects/project/frontend/src/components/Dashboard/Dashboard.jsx
+
 import { useState } from "react";
 import { Overview } from "./Overview";
-import Study from "./Study";
-import StudyManager from "./StudyManager";
+import Study from "./Recorder";
+import StudyManager from "./Timer";
 import Rankings from "./Rankings";
 import Community from "./Community";
 
@@ -13,7 +15,7 @@ export default function Dashboard() {
     { id: "rankings", name: "Rankings", icon: "🏆" },
     { id: "study", name: "Study Session Recorder", icon: "🎥" },
     { id: "studyManager", name: "Deep Work Timer", icon: "⏱️" },
-    { id: "overview", name: "Overview", icon: "📊" },
+    { id: "overview", name: "Analytics", icon: "📊" },
     { id: "community", name: "Community", icon: "💬", badge: "Live" },
     { id: "settings", name: "Settings", icon: "⚙️" },
   ];

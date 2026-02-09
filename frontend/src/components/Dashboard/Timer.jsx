@@ -1,17 +1,17 @@
-// /Users/homefolder/Desktop/Projects/project/frontend/src/components/Dashboard/StudyManager.jsx
-// /Users/homefolder/Desktop/Projects/project/frontend/src/components/Dashboard/Study.jsx , video metadata read is here
-// i want y to import this varible , which is here produtive time , if i upload video or timer , both should reflect on each page together , got it , do it 
+// /Users/homefolder/Desktop/Projects/project/frontend/src/components/Dashboard/Timer.jsx
 
 import { useEffect, useState } from "react";
+import { useStudyTime } from "../../context/StudyTimeContext";
 
 export default function StudyManager() {
+
   const [totalSeconds, setTotalSeconds] = useState(25 * 60);
   const [secondsLeft, setSecondsLeft] = useState(25 * 60);
 
   const [isRunning, setIsRunning] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
-  const [productiveSeconds, setProductiveSeconds] = useState(0);
+  const {productiveSeconds, addProductiveSeconds} = useStudyTime();
   const [customMinutes, setCustomMinutes] = useState("");
 
   // EI additions
@@ -27,9 +27,10 @@ export default function StudyManager() {
 
     if (secondsLeft === 0) {
       setIsRunning(false);
-      setProductiveSeconds((p) => p + totalSeconds);
+      addProductiveSeconds(elapsedSeconds);
       setSecondsLeft(totalSeconds);
-      return;
+        setReflection(null);
+      
     }
 
     const id = setInterval(() => {
@@ -84,7 +85,7 @@ export default function StudyManager() {
   };
 
   const addStudiedTime = () => {
-    setProductiveSeconds((p) => p + elapsedSeconds);
+    addProductiveSeconds(elapsedSeconds);
     setSecondsLeft(totalSeconds);
     setIsPaused(false);
     setReflection(null);
@@ -92,7 +93,6 @@ export default function StudyManager() {
 
   return (
     <div className="min-h-screen bg-neutral-900 text-white flex flex-col items-center justify-center gap-8">
-
       {/* Productive Time */}
       <div className="text-lg text-neutral-300">
         Focused Time Today:{" "}
@@ -113,7 +113,14 @@ export default function StudyManager() {
       {/* Circular Timer */}
       <div className="relative w-80 h-80 flex items-center justify-center">
         <svg className="absolute inset-0" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="45" stroke="#262626" strokeWidth="6" fill="none" />
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            stroke="#262626"
+            strokeWidth="6"
+            fill="none"
+          />
           <circle
             cx="50"
             cy="50"
@@ -175,7 +182,9 @@ export default function StudyManager() {
                 key={r}
                 onClick={() => setReflection(r)}
                 className={`transition ${
-                  reflection === r ? "scale-125" : "opacity-60 hover:opacity-100"
+                  reflection === r
+                    ? "scale-125"
+                    : "opacity-60 hover:opacity-100"
                 }`}
               >
                 {r}

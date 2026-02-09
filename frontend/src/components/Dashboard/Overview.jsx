@@ -1,12 +1,22 @@
+import { useStudyTime } from "../../context/StudyTimeContext";
+
 function Overview() {
+  const { productiveSeconds } = useStudyTime();
+
+  const format = (s) => {
+    const h = Math.floor(s / 3600);
+    const m = Math.floor((s % 3600) / 60);
+    return `${h}h ${m}m`;
+  };
+
   return (
     <>
       <h1 className="text-2xl font-bold mb-6">Today’s Progress</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Stat title="Today" value="2h 45m" />
-        <Stat title="This Week" value="14h" />
-        <Stat title="Global Rank" value="#128" />
+        <Stat title="Today" value={format(productiveSeconds)} />
+        <Stat title="This Week" value="—" />
+        <Stat title="This Month" value="—" />
       </div>
     </>
   );
