@@ -5,7 +5,8 @@ import { Overview } from "./Overview";
 import Study from "./Recorder";
 import StudyManager from "./Timer";
 import Rankings from "./Rankings";
-import Community from "./Community";
+import NoteTaking from "./NoteTaking";
+import TodoList from "./TodoList";
 
 export default function Dashboard() {
   const [activeItem, setActiveItem] = useState("rankings");
@@ -15,8 +16,10 @@ export default function Dashboard() {
     { id: "rankings", name: "Rankings", icon: "🏆" },
     { id: "study", name: "Study Session Recorder", icon: "🎥" },
     { id: "studyManager", name: "Deep Work Timer", icon: "⏱️" },
+    { id: "notetaking", name: "Notes Taking Tool", icon: "📝" },
+    { id: "todolist", name: "Todo List", icon: "📋" },
+
     { id: "overview", name: "Analytics", icon: "📊" },
-    { id: "community", name: "Community", icon: "💬", badge: "Live" },
     { id: "settings", name: "Settings", icon: "⚙️" },
   ];
 
@@ -176,7 +179,8 @@ export default function Dashboard() {
                 {activeItem === "study" && <Study />}
                 {activeItem === "studyManager" && <StudyManager />}
                 {activeItem === "overview" && <Overview />}
-                {activeItem === "community" && <Community />}
+                {activeItem === "notetaking" && <NoteTaking />}
+                {activeItem === "todolist" && <TodoList />}
                 {activeItem === "settings" && (
                   <div className="text-center py-12">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 mb-4">
